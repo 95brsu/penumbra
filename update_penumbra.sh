@@ -53,6 +53,13 @@ function rust_update {
   rustup default nightly
 }
 
+function tendermint {
+  tendermint init full 
+  curl -s http://testnet.penumbra.zone:26657/genesis | jq ".result.genesis" > $HOME/.tendermint/config/genesis.json
+}
+
+
+
 
 colors
 
@@ -69,5 +76,6 @@ line
 build_penumbra
 reset_wallet
 build_pd
+tendermint
 line
-echo -e "${RED}Скрипт завершил свою работу!!! ПОЕХАЛИ ${NORMAL}"
+echo -e "${RED}Скрипт завершил свою работу!!! ПОЕХАЛИ. осталось доделать самую малость и вперед ${NORMAL}"
