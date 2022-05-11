@@ -30,6 +30,7 @@ function install_pen {
 
 function build_pd {
 cd $HOME/penumbra/
+sudo apt-get install clang
 cargo build --release --bin pd
 }
 
@@ -66,6 +67,5 @@ echo -e "${GREEN}2/2 Начинаем билд ${NORMAL}"
 line
 reset_wallet
 build_pd
-tendermint
 line
 echo -e "${RED}Скрипт завершил свою работу!!! ПОЕХАЛИ. осталось доделать самую малость и вперед ${NORMAL}"
