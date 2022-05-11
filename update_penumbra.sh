@@ -22,24 +22,19 @@ function install_tools {
   sleep 1
 }
 
-function source_git {
-  if [ ! -d $HOME/penumbra/ ]; then
-    git clone https://github.com/penumbra-zone/penumbra
-  fi
+function install_pen {
+  rm -rf penumbra 
+  apt-get install build-essential pkg-config libssl-dev
+  git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
   git checkout 014-kore
+  cargo update
 }
 
 function build_penumbra {
-  if [ ! -d $HOME/penumbra/ ]; then
-    cd $HOME/penumbra/
-    cargo build --release --bin pcli
-  else
-    source_git
-    cd $HOME/penumbra/
-    cargo build --release --bin pcli
-  fi
+     cargo build --release --bin pcli
+  
 }
 
 function build_pd {
@@ -67,10 +62,9 @@ line
 echo -e "${RED}Начинаем обновление ${NORMAL}"
 line
 echo -e "${GREEN}1/2 Обновляем репозиторий ${NORMAL}"
-source_git
+install_pen
 line
 echo -e "${GREEN}2/2 Начинаем билд ${NORMAL}"
-rust_update
 line
 build_penumbra
 reset_wallet
