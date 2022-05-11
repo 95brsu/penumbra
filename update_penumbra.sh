@@ -14,13 +14,6 @@ function colors {
   NORMAL="\e[0m"
 }
 
-function install_tools {
-  curl -s https://raw.githubusercontent.com/razumv/helpers/main/tools/install_ufw.sh | bash &>/dev/null
-  curl -s https://raw.githubusercontent.com/razumv/helpers/main/tools/install_rust.sh | bash &>/dev/null
-  source ~/.cargo/env
-  rustup detault nightly
-  sleep 1
-}
 
 function install_pen {
   rm -rf penumbra 
@@ -30,12 +23,10 @@ function install_pen {
   git fetch
   git checkout 014-kore
   cargo update
+  cargo build --quiet --release --bin pcli
 }
 
-function build_penumbra {
-     cargo build --release --bin pcli
-  
-}
+
 
 function build_pd {
 cd $HOME/penumbra/
@@ -73,7 +64,6 @@ install_pen
 line
 echo -e "${GREEN}2/2 Начинаем билд ${NORMAL}"
 line
-build_penumbra
 reset_wallet
 build_pd
 tendermint
