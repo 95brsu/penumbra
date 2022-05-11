@@ -1,6 +1,3 @@
-curl -s https://raw.githubusercontent.com/95brsu/penumbra/main/install.sh > install.sh && chmod +x install.sh && ./install.sh
-
-
 #!/bin/bash
 
 function logo {
