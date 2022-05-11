@@ -1,3 +1,6 @@
+curl -s https://raw.githubusercontent.com/95brsu/penumbra/main/install.sh > install.sh && chmod +x install.sh && ./install.sh
+
+
 #!/bin/bash
 
 function logo {
@@ -42,14 +45,15 @@ function build_penumbra {
   fi
 }
 
-function generate_wallet {
-  cd $HOME/penumbra/
-  cargo run --quiet --release --bin pcli wallet generate
+function build_pd {
+cd $HOME/penumbra/
+cargo build --release --bin pd
 }
+
 
 function reset_wallet {
   cd $HOME/penumbra/
-  cargo run --quiet --release --bin pcli wallet generate
+  cargo run --quiet --release --bin pcli wallet reset
 }
 
 function rust_update {
@@ -73,5 +77,6 @@ rust_update
 line
 build_penumbra
 reset_wallet
+build_pd
 line
 echo -e "${RED}Скрипт завершил свою работу!!! ПОЕХАЛИ ${NORMAL}"
