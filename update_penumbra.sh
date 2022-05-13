@@ -51,7 +51,10 @@ function tendermint {
   curl -s http://testnet.penumbra.zone:26657/genesis | jq ".result.genesis" > $HOME/.tendermint/config/genesis.json
 }
 
-
+function dannie {
+  curl -s http://testnet.penumbra.zone:26657/status | jq ".result.node_info.id"
+  grep -A3 pub_key ~/.tendermint/config/priv_validator_key.json
+}
 
 
 colors
@@ -66,4 +69,6 @@ line
 reset_wallet
 build_pd
 line
-echo -e "${RED}Скрипт завершил свою работу!!! Если видишь баланс, то все четко, можно Продолжать ${NORMAL}"
+dannie
+line
+echo -e "${RED}Скрипт завершил свою работу!!! Если видишь баланс, то все четко, можно Продолжать << nano $HOME/.tendermint/config/config.toml >> << nano validator.json >> ${NORMAL}"
