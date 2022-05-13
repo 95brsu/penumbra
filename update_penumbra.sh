@@ -5,7 +5,7 @@ function logo {
 }
 
 function line {
-  echo "----11.05.2022--------------------------------------------------------------------"
+  echo "----12.05.2022--------------------------------------------------------------------"
 }
 
 function colors {
@@ -59,14 +59,11 @@ colors
 line
 logo
 line
-echo -e "${RED}Начинаем обновление ${NORMAL}"
+echo -e "${RED}Начинаем обновление Penumbra ${NORMAL}"
 line
-echo -e "${GREEN}1/2 Обновляем репозиторий ${NORMAL}"
 install_pen
-line
-echo -e "${GREEN}2/2 Начинаем билд ${NORMAL}"
 line
 reset_wallet
 build_pd
 line
-echo -e "${RED}Скрипт завершил свою работу!!! ПОЕХАЛИ. осталось доделать самую малость и вперед ${NORMAL}"
+echo -e "${RED}Скрипт завершил свою работу!!!  ${NORMAL}"
