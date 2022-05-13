@@ -21,7 +21,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 014-kore
+  git checkout 015-ersa
   cargo update
   cargo build --quiet --release --bin pcli
 }
