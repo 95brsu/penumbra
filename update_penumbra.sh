@@ -5,7 +5,7 @@ function logo {
 }
 
 function line {
-  echo "----12.05.2022--------------------------------------------------------------------"
+  echo "----24.05.2022--------------------------------------------------------------------"
 }
 
 function colors {
@@ -21,7 +21,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 015-ersa-v2
+  git checkout 016-pandia
   cargo update
   cargo build --quiet --release --bin pcli
 }
