@@ -38,7 +38,7 @@ cargo run --quiet --release --bin pcli balance
 
 function reset_wallet {
   cd $HOME/penumbra/
-  cargo run --quiet --release --bin pcli wallet reset
+  
 }
 
 function rust_update {
