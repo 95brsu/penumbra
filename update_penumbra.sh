@@ -21,7 +21,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 016-pandia
+  git checkout 017-carpo.1
   cargo update
   cargo build --quiet --release --bin pcli
 }
