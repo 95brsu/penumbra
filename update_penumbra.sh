@@ -17,7 +17,7 @@ sleep 2
 
 
 function line {
-  echo "----02.06.2022--------------------------------------------------------------------"
+  echo "----09.06.2022--------------------------------------------------------------------"
 }
 
 function colors {
@@ -33,7 +33,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 017-carpo.1
+  git checkout 018-euanthe
   cargo update
   cargo build --quiet --release --bin pcli
 }
