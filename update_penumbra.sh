@@ -17,7 +17,7 @@ sleep 2
 
 
 function line {
-  echo "---02.08.2022-------ZA VDV---------------------------------------------------------"
+  echo "---08.08.2022-------ZA VDV---------------------------------------------------------"
 }
 
 function colors {
@@ -33,7 +33,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 023-arche.1
+  git checkout 024-dia
   cargo update
   cargo build --quiet --release --bin pcli
 }
