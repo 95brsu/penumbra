@@ -67,7 +67,7 @@ function dannie {
   curl -s http://testnet.penumbra.zone:26657/status | jq ".result.node_info.id"
   grep -A3 pub_key ~/.tendermint/config/priv_validator_key.json
   cd $HOME/penumbra/
-  cargo run --release --bin pcli -- validator template-definition --file validator.json
+  cargo run --release --bin pcli -- validator definition template --file validator.json
 }
 
 
