@@ -44,7 +44,7 @@ function build_pd {
 cd $HOME/penumbra/
 sudo apt-get install clang
 cargo build --release --bin pd
-cargo run --quiet --release --bin pcli balance
+cargo run --quiet --release --bin pcli view balance
 }
 
 
