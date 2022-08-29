@@ -17,7 +17,7 @@ sleep 2
 
 
 function line {
-  echo "---23.08.2022---------------------------------------------------------------------"
+  echo "---29.08.2022---------------------------------------------------------------------"
 }
 
 function colors {
@@ -68,6 +68,7 @@ function dannie {
   grep -A3 pub_key ~/.tendermint/config/priv_validator_key.json
   cd $HOME/penumbra/
   cargo run --release --bin pcli -- validator definition template --file validator.json
+  grep -A3 address ~/penumbra/validator.json
 }
 
 
