@@ -33,7 +33,7 @@ function install_pen {
   git clone https://github.com/penumbra-zone/penumbra
   cd $HOME/penumbra
   git fetch
-  git checkout 028-harpalyke
+  git checkout 029-eukelade
   cargo update
   cargo build --quiet --release --bin pcli
 }
