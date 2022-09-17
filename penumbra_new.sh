@@ -83,7 +83,7 @@ echo "============================================================"
 read PENUMBRA_NODENAME
 echo export PENUMBRA_NODENAME=${PENUMBRA_NODENAME} >> $HOME/.bash_profile
 source ~/.bash_profile
-sed '4c\"name": "${PENUMBRA_NODENAME}"' $HOME/penumbra/validator.json
+sed '4c\"name": "$PENUMBRA_NODENAME"' $HOME/penumbra/validator.json
 sleep 10
 break
 ;;
