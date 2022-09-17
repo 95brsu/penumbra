@@ -61,6 +61,7 @@ break
 "Проверить баланс")
 
 cd penumbra && cargo run --release --bin pcli -- view balance
+cd
 
 break
 ;;
@@ -68,6 +69,7 @@ break
 "Вывести список валидаторов")
 
 cd penumbra && cargo run --release --bin pcli -- query validator list -i
+cd
 
 break
 ;;
