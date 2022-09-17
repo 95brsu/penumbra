@@ -25,6 +25,7 @@ options=(
 "Проверить логи(в разработке!)"
 "Проверить баланс"
 "Вывести список валидаторов"
+"Задать имя ноды"
 "Выход")
 select opt in "${options[@]}"
 do
@@ -70,6 +71,19 @@ break
 
 cd $HOME/penumbra && cargo run --release --bin pcli -- query validator list -i && cd ..
 
+
+break
+;;
+
+"Задать имя ноды"
+
+echo "============================================================"
+echo "Задате имя:"
+echo "============================================================"
+read PENUMBRA_NODENAME
+echo export PENUMBRA_NODENAME=${PENUMBRA_NODENAME} >> $HOME/.bash_profile
+source ~/.bash_profile
+sed '4c\"name": "${PENUMBRA_NODENAME}"' $HOME/penumbra/validator.json
 
 break
 ;;
