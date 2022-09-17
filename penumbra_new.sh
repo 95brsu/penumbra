@@ -22,7 +22,7 @@ echo "=================================================="
 PS3='Выберете опцию: '
 options=(
 "Установить ноду"
-"Проверить логи"
+"Проверить логи(в разработке!)"
 "Проверить баланс"
 "Вывести список валидаторов"
 "Выход")
@@ -60,7 +60,7 @@ break
 
 "Проверить баланс")
 
-cd penumbra && cargo run --release --bin pcli -- view balance && cd ..
+cd $HOME/penumbra && cargo run --release --bin pcli -- view balance
 
 
 break
@@ -68,7 +68,7 @@ break
 
 "Вывести список валидаторов")
 
-cd penumbra && cargo run --release --bin pcli -- query validator list -i && cd ..
+cd $HOME/penumbra && cargo run --release --bin pcli -- query validator list -i && cd ..
 
 
 break
