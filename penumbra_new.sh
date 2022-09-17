@@ -61,7 +61,7 @@ break
 "Проверить баланс")
 
 cd penumbra && cargo run --release --bin pcli -- view balance
-cd
+cd ..
 
 break
 ;;
@@ -69,12 +69,12 @@ break
 "Вывести список валидаторов")
 
 cd penumbra && cargo run --release --bin pcli -- query validator list -i
-cd
+cd ..
 
 break
 ;;
 
-"Exit")
+"Выход")
 exit
 ;;
 *) echo "Неправильная опция $REPLY";;
