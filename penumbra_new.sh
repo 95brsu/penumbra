@@ -14,6 +14,8 @@ options=(
 "Проверить логи(в разработке!)"
 "Проверить баланс"
 "Вывести список валидаторов"
+"Отправить файл"
+"Делегация"
 "Задать имя"
 "Выход")
 select opt in "${options[@]}"
@@ -63,6 +65,33 @@ cd $HOME/penumbra && cargo run --release --bin pcli -- query validator list -i &
 
 break
 ;;
+
+"Отправить файл")
+
+cd $HOME/penumbra && cargo run --release --bin pcli -- validator definition upload --file validator.json && cd ..
+
+
+break
+;;
+
+"Делегация")
+
+echo "============================================================"
+echo "Введите количество токенов:"
+echo "============================================================"
+read PENUMBRA_MONETA
+
+echo "============================================================"
+echo "Введите валопер адрес:"
+echo "============================================================"
+read PENUMBRA_VALOPER
+
+cd $HOME/penumbra && cargo run --release --bin pcli transaction delegate ${PENUMBRA_MONETA}penumbra --to ${PENUMBRA_VALOPER} && cd ..
+
+
+break
+;;
+
 
 "Задать имя")
 
