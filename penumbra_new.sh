@@ -33,7 +33,7 @@ case $opt in
 
 "Установить ноду")
 echo "============================================================"
-echo "Установка версии от 17.09.2022"
+echo "Установка версии от 25.09.2022"
 echo "============================================================"
 
 rm -rf penumbra 
@@ -41,7 +41,7 @@ apt-get install build-essential pkg-config libssl-dev
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 029-eukelade
+git checkout 030-isonoe
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
