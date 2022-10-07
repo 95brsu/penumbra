@@ -32,7 +32,7 @@ apt-get install build-essential pkg-config libssl-dev
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 030-isonoe
+git checkout 031-autonoe
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
