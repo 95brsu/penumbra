@@ -15,6 +15,7 @@ options=(
 "Обновить ноду"
 "Установка tendermint"
 "Вывести информацию"
+"Синхронизация"
 "Проверить логи(в разработке!)"
 "Проверить баланс"
 "Вывести список валидаторов"
@@ -96,6 +97,15 @@ grep -A3 address ~/penumbra/validator.json
 
 break
 ;;
+
+"Синронизация")
+
+cd $HOME/penumbra/
+cargo run --quiet --release --bin pcli sync
+
+break
+;;
+
 
 "Проверить баланс")
 
