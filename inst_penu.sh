@@ -98,7 +98,7 @@ grep -A3 address ~/penumbra/validator.json
 break
 ;;
 
-"Синронизация")
+"Синхронизация")
 
 cd $HOME/penumbra/
 cargo run --quiet --release --bin pcli sync
