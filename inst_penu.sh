@@ -55,7 +55,7 @@ rm -rf penumbra
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 033-eirene
+git checkout 034-aoede
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
