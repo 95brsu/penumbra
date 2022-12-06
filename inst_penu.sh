@@ -45,7 +45,7 @@ break
 
 "Обновить ноду")
 echo "============================================================"
-echo "Установка версии от 22.11.2022" 036
+echo "Установка версии от 06.11.2022" 037
 echo "============================================================"
 
 sudo apt update && sudo apt upgrade -y
@@ -55,7 +55,7 @@ rm -rf penumbra
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 036-iocaste.2
+git checkout 037-megaclite.1
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
