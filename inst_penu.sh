@@ -45,7 +45,7 @@ break
 
 "Обновить ноду")
 echo "============================================================"
-echo "Установка версии от 04.01.2023" 039
+echo "Установка версии от 14.01.2023" 040
 echo "============================================================"
 
 sudo apt update && sudo apt upgrade -y
@@ -55,7 +55,7 @@ rm -rf penumbra
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 039-praxidike
+git checkout 040-themisto.1
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
