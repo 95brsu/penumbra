@@ -45,7 +45,7 @@ break
 
 "Обновить ноду")
 echo "============================================================"
-echo "Установка версии от 04.02.2023" 042
+echo "Установка версии от 09.02.2023" 043
 echo "============================================================"
 
 sudo apt update && sudo apt upgrade -y
@@ -55,7 +55,7 @@ rm -rf penumbra
 git clone https://github.com/penumbra-zone/penumbra
 cd $HOME/penumbra
 git fetch
-git checkout 042-adraste
+git checkout 043-leda
 cargo update
 cargo build --quiet --release --bin pcli
 cd $HOME/penumbra/
